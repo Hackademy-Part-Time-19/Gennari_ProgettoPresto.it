@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="landingpage.css">
+  <link rel="stylesheet" href="catalogo.css">
+  
+</head>
+<body>
+
+    <div style="display: flex;">
+
+        <div style="background-color: #B8621B;width: 200px;color: #E3CCAE;border: 2px solid wheat ;border-radius: 3px;cursor: pointer;transition: background-color 0.3s ease;">
+            <h5 style="background-color: #B8621B;margin: 0px;display: flex;align-items: center;justify-content: center;margin: 20px;">Filtro Prezzo</h5>
+    
+            <select id="inputPrezzo"
+                style="width: 100%;background-color: #B8621B;border: none;font-size: 25px;">
+                <option value="0-100">0-100€</option>
+                <option value="100-200">100-200€</option>
+                <option value="200-500">200-500€</option>
+                <option value="500">500€</option>
+            </select>
+        </div>    
+
+        <div style="background-color: #B8621B;width: 200px;color: #E3CCAE;border: 2px solid wheat ;border-radius: 3px;cursor: pointer;transition: background-color 0.3s ease;">
+            <h5 style="background-color: #B8621B;margin: 0px;display: flex;align-items: center;justify-content: center;margin: 20px;">Filtro Categoria</h5>
+
+            <select id="inputCategoria"
+                style="width: 100%;background-color: #B8621B;border: none;font-size: 25px;">
+                <option value="men's clothing">Moda Uomo</option>
+                <option value="women's clothing">Moda Donna</option>
+                <option value="jewelery">Gioielli</option>
+                <option value="electronics">Elettronica</option>
+            </select>
+        </div>
+
+        <div style="background-color: #B8621B;width: 200px;color: #E3CCAE;border: 2px solid wheat ;border-radius: 3px;cursor: pointer;transition: background-color 0.3s ease;">
+            <h5 style="background-color: #B8621B;margin: 0px;display: flex;align-items: center;justify-content: center;margin: 20px;">Filtro Nome</h5>
+
+            <input id="inputNome" placeholder="Cerca..." 
+            style="width: 190px;background-color: #B8621B;border: none;font-size: 25px;">
+    
+        </div>
+
+        <div>
+            <button onclick="vaiAlCatalogo()"> cerca</button>
+
+        </div>
+
+   </div>
+
+
+   <script src="landingpage.js"></script>
+
+<header class="hero">
+  <h1>Benvenuto!</h1>
+  
+
+  <div style="display: flex;align-items: center;justify-content: center;flex: 1;background-color: black;">
+    
+
+    <img id="immagineCover" src="immagini/slide-2.jpg" alt="isola" style="width: 100%;height: 100%;object-fit: cover;transition: 0.5s opacity;">
+
+</div>
+  
+
+    
+
+
+  <a href="#about" class="btn">Scopri di più</a>
+</header>
+
+<section id="about" class="about">
+  <h2>Chi Siamo</h2>
+  <p>Siamo un'azienda che si impegna a...</p>
+</section>
+
+<footer class="footer">
+  <p>Copyright &copy; 2023 | Nome dell'Azienda</p>
+</footer>
+
+</body>
+</html>
+
