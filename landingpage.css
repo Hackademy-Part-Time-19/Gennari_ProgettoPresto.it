@@ -1,43 +1,89 @@
-/* Stili per la landing page */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  .hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #f8f8f8;
-    color: #333;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #333;
-    border-radius: 5px;
-    margin-top: 20px;
-  }
-  
-  .about {
-    padding: 50px 20px;
-    background-color: #eee;
-    text-align: center;
-    color: #333;
-  }
-  
-  .footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-  }
+* {
+  background-color: black;
+}
 
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0; 
+  height: 130px;
+  width: 100%; 
+  color: white;
+}
   
+.logo img {
+  margin: 15px;
+  width: 300px; 
+  height: auto; 
+}
   
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;  
+}
+  
+.nav-links li {
+  display: inline;
+}
+  
+.nav-links a {
+  border: 1px solid #121020;
+  border-radius: 15px;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  font-size: large;
+  background-color: #141c3a;
+  margin-right: 20px;
+}
+  
+.nav-links a:hover {
+  color: #324c5c;
+}  
+  
+.dropdownPrezzo {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.menuPrezzo:hover .dropdownPrezzo {
+    display: block;
+}
+
+.dropdownCategoria {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+  
+.menuCategoria:hover .dropdownCategoria {
+  display: block;
+}
+
+.about {
+  padding: 50px 20px;
+  text-align: center;
+  color: white;
+}
+  
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+}

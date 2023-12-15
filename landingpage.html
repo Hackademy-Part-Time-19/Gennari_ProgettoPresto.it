@@ -3,20 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page</title>
+  <title>Presto.it</title>
+  <link rel="icon" href="immagini/PRESTO LOGO.png">
   <link rel="stylesheet" href="landingpage.css">
-  <link rel="stylesheet" href="catalogo.css">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
-    <div style="display: flex;">
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#">
+        <img src="immagini/PRESTO LOGO.png" alt="Logo">
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li onclick="VaiAdAccedi()"><a href="#">Accedi</a></li>
+      <li onclick="VaiARegistrazione()"><a href="#">Registrati</a></li>
+    </ul>
+  </nav>
 
-        <div style="background-color: #B8621B;width: 200px;color: #E3CCAE;border: 2px solid wheat ;border-radius: 3px;cursor: pointer;transition: background-color 0.3s ease;">
-            <h5 style="background-color: #B8621B;margin: 0px;display: flex;align-items: center;justify-content: center;margin: 20px;">Filtro Prezzo</h5>
+    <div style="display: flex;margin-top: 130px; ">
+
+        <div class="menuPrezzo" style="width: 200px;color: #b4ad63;cursor: pointer;transition: background-color 0.3s ease;margin-left: 20px;">
+            <h3  style="margin: 0px;display: flex;align-items: center;justify-content: center;margin: 10px;">Filtro Prezzo</h3>
     
-            <select id="inputPrezzo"
-                style="width: 100%;background-color: #B8621B;border: none;font-size: 25px;">
+            <select class="dropdownPrezzo" id="inputPrezzo"
+                style="width: 200px;background-color: #141c3a;border: none;font-size: 20px;color: #b4ad63;">
                 <option value="0-100">0-100€</option>
                 <option value="100-200">100-200€</option>
                 <option value="200-500">200-500€</option>
@@ -24,11 +36,11 @@
             </select>
         </div>    
 
-        <div style="background-color: #B8621B;width: 200px;color: #E3CCAE;border: 2px solid wheat ;border-radius: 3px;cursor: pointer;transition: background-color 0.3s ease;">
-            <h5 style="background-color: #B8621B;margin: 0px;display: flex;align-items: center;justify-content: center;margin: 20px;">Filtro Categoria</h5>
-
-            <select id="inputCategoria"
-                style="width: 100%;background-color: #B8621B;border: none;font-size: 25px;">
+        <div class="menuCategoria" style="width: 200px;color: #b4ad63;cursor: pointer;transition: background-color 0.3s ease;">
+            <h3 style="margin: 0px;display: flex;align-items: center;justify-content: center;margin: 10px;">Categoria</h3>
+            
+            <select class="dropdownCategoria" id="inputCategoria"
+            style="width: 200px;background-color: #141c3a;border: none;font-size: 20px;color: #b4ad63;">
                 <option value="men's clothing">Moda Uomo</option>
                 <option value="women's clothing">Moda Donna</option>
                 <option value="jewelery">Gioielli</option>
@@ -36,49 +48,39 @@
             </select>
         </div>
 
-        <div style="background-color: #B8621B;width: 200px;color: #E3CCAE;border: 2px solid wheat ;border-radius: 3px;cursor: pointer;transition: background-color 0.3s ease;">
-            <h5 style="background-color: #B8621B;margin: 0px;display: flex;align-items: center;justify-content: center;margin: 20px;">Filtro Nome</h5>
-
-            <input id="inputNome" placeholder="Cerca..." 
-            style="width: 190px;background-color: #B8621B;border: none;font-size: 25px;">
+        <div class="menuNome" style="background-color: #141c3a;width: 200px;color: #b4ad63;border: 2px solid #121020;border-radius: 15px;cursor: pointer;transition: background-color 0.3s ease;margin-right: 20px;display: flex;">
+            
+          <i class="fa fa-search" style="font-size:24px;background-color: #141c3a;margin: 5px;margin-top: 10px;"></i>
+            <input id="inputNome" placeholder="Ricerca" 
+            style="width: 140px;background-color: #141c3a;border: none;font-size: 20px;color: #b4ad63;outline: none;margin: 5px;margin-top: 10px;">
     
         </div>
 
-        <div>
-            <button onclick="vaiAlCatalogo()"> cerca</button>
-
-        </div>
+        <button style="background-color: #141c3a;color: #b4ad63;border: 2px solid #121020;border-radius: 15px;cursor: pointer;transition: background-color 0.3s ease;margin-right: 20px;margin-left: 20px;padding-left: 20px;padding-right: 20px;" onclick="vaiAlCatalogo()"> cerca</button>
 
    </div>
 
 
-   <script src="landingpage.js"></script>
-
-<header class="hero">
-  <h1>Benvenuto!</h1>
+<div style="margin: 10px;position: relative;text-align: center;">
   
-
-  <div style="display: flex;align-items: center;justify-content: center;flex: 1;background-color: black;">
-    
-
-    <img id="immagineCover" src="immagini/slide-2.jpg" alt="isola" style="width: 100%;height: 100%;object-fit: cover;transition: 0.5s opacity;">
-
+  <img id="immagineCover" src="immagini/manìs clothing.png" alt="isola" style="width: 100%;height: 100%;object-fit: contain;transition: 0.5s opacity;">
+  
 </div>
-  
 
-    
-
-
-  <a href="#about" class="btn">Scopri di più</a>
-</header>
+<script src="landingpage.js"></script>
+<script src="catalogo.js"></script>
+<script src="registrazione.js"></script>
+<script src="accedi.js"></script>
 
 <section id="about" class="about">
-  <h2>Chi Siamo</h2>
-  <p>Siamo un'azienda che si impegna a...</p>
+      <h2>Chi Siamo</h2>
+      <p></p>
+      <p>Siamo un team appassionato di moda, tecnologia e innovazione la nostra missione è offrire prodotti di alta qualità...</p>
 </section>
 
 <footer class="footer">
-  <p>Copyright &copy; 2023 | Nome dell'Azienda</p>
+  <img src="immagini/PRESTO LOGO.png" alt="Logo">
+  <p>Copyright &copy; 2023 | Presto.it</p>
 </footer>
 
 </body>
